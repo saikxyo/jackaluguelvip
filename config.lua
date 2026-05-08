@@ -5,7 +5,11 @@ Config = {}
 -- ========================================
 
 -- Debug mode (imprime mensagens no console F8)
-Config.Debug = false
+Config.Debug = true
+
+-- Modo de Teste (Reduz tempo de aluguel para 50 segundos)
+Config.TestMode = false
+Config.TestTime = 50 -- Segundos
 
 -- Item usado para pagar o aluguel
 Config.PaymentItem = 'zncoin'
@@ -15,7 +19,7 @@ Config.RentalDays = 30
 
 -- Preço FIXO por aluguel de 30 dias
 Config.RentalPrice = {
-    multiplier = 30, -- 30 dias fixos
+    multiplier = 30,      -- 30 dias fixos
     showDailyPrice = true -- Mostra preço por dia na interface, mas cobra pelos 30 dias
 }
 
@@ -37,7 +41,7 @@ Config.DisplayVehicles = {
         model = 'elegy',
     },
     {
-        coords = vector4(-1265.94, -355.76, 36.18, 205.82),  
+        coords = vector4(-1265.94, -355.76, 36.18, 205.82),
         model = 'sultan2',
     },
     {
@@ -61,6 +65,20 @@ Config.AutoSpawnLocation = vector4(-1241.53, -343.95, 37.33, 274.21)
 
 -- Habilitar spawn automático após aluguel?
 Config.AutoSpawnEnabled = true
+
+-- ========================================
+-- LOCAIS DE INTERAÇÃO ESTÁTICOS (PONTOS DE ACESSO)
+-- ========================================
+-- Locais onde o jogador pode abrir o menu sem que haja um carro de exibição
+Config.StaticInteractionPoints = {
+    {
+        coords = vector3(-1252.46, -349.0, 36.91),
+        size = vector3(2.0, 2.0, 2.0),
+        rotation = 0,
+        label = 'Acessar Catálogo',
+        icon = 'fas fa-tablet-alt'
+    }
+}
 
 -- ========================================
 -- CONFIGURAÇÕES DE TEST-DRIVE
@@ -126,7 +144,7 @@ Config.Messages = {
     renewal_success = 'Você renovou o aluguel do %s por mais 30 dias!',
     vehicle_spawned = 'Seu veículo foi entregue!',
     vehicle_displayed = 'Agora exibindo: %s no local que você clicou!',
-    
+
     -- Erros
     insufficient_funds = 'Você não tem %s suficientes! Necessário: %s',
     no_stock = 'Este veículo está sem estoque no momento!',
@@ -136,7 +154,7 @@ Config.Messages = {
     rental_expired = 'O aluguel deste veículo expirou e foi removido do seu inventário!',
     spawn_blocked = 'O local de entrega está bloqueado!',
     slot_not_identified = 'Erro: Não foi possível identificar o veículo clicado!',
-    
+
     -- Informações
     days_remaining = 'Dias restantes: %s',
     rental_info = 'Alugado em: %s | Expira em: %s',
@@ -161,9 +179,9 @@ Config.Blip = {
     enabled = true,
     coords = vector3(-1255.9, -366.22, 37.17),
     sprite = 326, -- Ícone do blip
-    color = 5, -- Cor amarela
+    color = 5,    -- Cor amarela
     scale = 0.8,
-    name = 'Aluguel de Carros VIP'
+    name = 'Aluguel de Carros'
 }
 
 -- ========================================
@@ -183,11 +201,12 @@ Config.RequireVIP = false
 
 Config.Webhook = {
     enabled = true,
-    url = '',
-    
+    url =
+    'https://discord.com/api/webhooks/1468116768143839242/u5tlKPBGSfMhlts3AFxWcX7M45ed3rKfAgoPk8DATv-iK2ips64iXus-TjfMozR2j8hQ',
+
     -- Cores para diferentes ações
     colors = {
-        rental = 3066993, -- Azul para novos aluguéis
+        rental = 3066993,   -- Azul para novos aluguéis
         expired = 15158332, -- Vermelho para expirados
         renewal = 15844367, -- Dourado para renovações
     }
@@ -199,8 +218,8 @@ Config.Webhook = {
 
 Config.NUI = {
     -- Título da interface
-    title = 'Concessionária VIP',
-    
+    title = 'Concessionária de LUXO',
+
     -- Texto do botão de fechar
     closeButton = '✕',
 }

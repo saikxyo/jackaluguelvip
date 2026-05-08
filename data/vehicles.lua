@@ -4,7 +4,19 @@ VehicleData = {}
 -- LISTA DE VEÍCULOS VIP PARA ALUGUEL
 -- ========================================
 
-VehicleData.Vehicles = {-- carros vip
+VehicleData.Vehicles = { -- carros vip
+    t20 = {
+        name = 't20',
+        brand = 't20',
+        model = 't20',
+        price = 10,
+        category = 'vip',
+        type = 'automobile',
+        hash = `t20`,
+        stock = 2,
+        price2 = 150,
+        price2_item = 'zncoin'
+    },
     s15 = {
         name = 'Nissan Silvia S15',
         brand = 'Nissan',
@@ -274,7 +286,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `animfk8hr`,
         stock = 2,
     },
-        autobio = {
+    autobio = {
         name = 'Audi R8 Autobio',
         brand = 'Audi',
         model = 'autobio',
@@ -515,7 +527,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `gt3demon`,
         stock = 2,
     },
-        hycadeevo = {
+    hycadeevo = {
         name = 'Hyundai i30 Evo',
         brand = 'Hyundai',
         model = 'hycadeevo',
@@ -723,7 +735,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `gtz34`,
         stock = 2,
     },
-        lfa2011 = {
+    lfa2011 = {
         name = 'Lexus LFA 2011',
         brand = 'Lexus',
         model = 'lfa2011',
@@ -931,7 +943,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `911r`,
         stock = 2,
     },
-        porsche918 = {
+    porsche918 = {
         name = 'Porsche 918',
         brand = 'Porsche',
         model = '918',
@@ -1139,7 +1151,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `ferrariitalia`,
         stock = 2,
     },
-        gol = {
+    gol = {
         name = 'Volkswagen Gol',
         brand = 'Volkswagen',
         model = 'gol',
@@ -1336,7 +1348,7 @@ VehicleData.Vehicles = {-- carros vip
         hash = `r35sil`,
         stock = 2,
     },
-        r34flick = {
+    r34flick = {
         name = 'Nissan Skyline R34 Flick',
         brand = 'Nissan',
         model = 'r34flick',
